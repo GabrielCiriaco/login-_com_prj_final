@@ -1,0 +1,42 @@
+
+<div class = "main">
+  <div class = "box">  
+    <h3>Tela de Cadastro</h3>
+    
+    <div >
+      <input type="text" class="form" placeholder="Username" #userName required>
+    </div>
+
+    <div >
+      <input type="password"  class="form" placeholder="Password" #userPassword required>
+    </div>
+    <div>
+      <span routerLink="/forgot-password">Forgot Password?</span>
+    </div>
+
+    
+    <div>
+      <button class="btn" (click)="authService.SignUp(userName.value, userPassword.value)">
+          Cadastrar
+      </button> 
+    </div>
+
+    <div>
+      <span>Or</span>
+    </div>
+
+    
+    <div >
+      <button type="button" class="googleBtn" (click)="authService.GoogleAuth()">
+        <i class="fab fa-google-plus-g"></i>
+        Log in with Google
+      </button>
+    </div>
+
+    
+    <div class="criar">
+      <span>Já possui uma conta? <span class="redirect" routerLink="/sign-in">Logar!</span></span>
+    </div>
+
+  </div>
+</div>
