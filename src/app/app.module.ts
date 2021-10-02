@@ -16,10 +16,6 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
-import { DashboardModule } from './dashboard/dashboard.module';
-import { CalculadoraModule } from './calculadora';
-import { TarefasModule } from './tarefas/tarefas.module';
-import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
 
 
 @NgModule({
@@ -33,14 +29,10 @@ import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
   ],
   imports: [
     BrowserModule,
-    DashboardModule,
-    CalculadoraModule,
-    TarefasModule,
-    JogoDaVelhaModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AppRoutingModule,
   ],
   providers: [
     AuthService
