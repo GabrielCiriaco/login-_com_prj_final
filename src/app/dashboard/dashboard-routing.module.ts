@@ -8,13 +8,9 @@ import { JogoDaVelhaRoutes } from "../jogo-da-velha/jogo-da-velha-routing.module
 
 
 export const DashboardRoutes: Routes = [
-	{ 
-		path: 'dashboard', 
-		component: DashboardComponent 
+	{
+		path: 'dashboard',
+		component: DashboardComponent,
 	},
-	
-  ...CalculadoraRoutes,
-  ...TarefaRoutes,
-  ...JogoDaVelhaRoutes
 
 ];

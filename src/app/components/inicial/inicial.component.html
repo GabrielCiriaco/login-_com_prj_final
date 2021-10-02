@@ -22,9 +22,9 @@
             <ul class="dropdown-menu">
               <li><a href="#">Dashboard</a></li>
               <li role="separator" class="divider"></li>
-              <li><a [routerLink]="['/calculadora']" href="#">Calculadora</a></li>
-              <li><a [routerLink]="['/tarefas']" href="#">Gerenciador de tarefas</a></li>
-              <li><a [routerLink]="['/jogo-da-velha']"href="#">Jogo da velha</a></li>
+              <li><a href="#" [routerLink]="['inicial/calculadora']" href="#">Calculadora</a></li>
+              <li><a [routerLink]="['inicial/tarefas']" href="#">Gerenciador de tarefas</a></li>
+              <li><a [routerLink]="['inicial/jogo-da-velha']"href="#">Jogo da velha</a></li>
             </ul>
           </li>
         </ul>
@@ -34,5 +34,3 @@
   <div class="container-fluid">
     <router-outlet></router-outlet>
   </div>
-  
-  <router-outlet></router-outlet>
