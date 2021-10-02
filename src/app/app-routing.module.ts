@@ -31,7 +31,8 @@ const routes: Routes = [
   { path: 'inicial', 
   component: InicialComponent, 
   canActivate: [AuthGuard], children:[
-    { path: 'dashboard',
+    
+    { path: '',
       component: DashboardComponent 
     },
     ...CalculadoraRoutes,
