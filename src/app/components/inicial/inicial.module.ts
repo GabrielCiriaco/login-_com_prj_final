@@ -9,7 +9,7 @@ import { TarefasModule } from '../../tarefas/tarefas.module';
 import { JogoDaVelhaModule } from '../../jogo-da-velha/jogo-da-velha.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent 
   ],
   imports: [
     BrowserModule,
