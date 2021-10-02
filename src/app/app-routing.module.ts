@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,9 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 
 
 import { AuthGuard } from "./shared/guard/auth.guard";
+import { CalculadoraRoutes } from './calculadora/calculadora-routing.module';
+import { TarefaRoutes } from './tarefas/tarefas.routing.module';
+import { JogoDaVelhaRoutes } from './jogo-da-velha/jogo-da-velha-routing.module';
 
 
 const routes: Routes = [
@@ -27,9 +31,13 @@ const routes: Routes = [
   { path: 'inicial', 
   component: InicialComponent, 
   canActivate: [AuthGuard], children:[
-    { path:'', 
-      redirectTo: 'inicial', 
-      pathMatch: 'full' }
+    
+    { path: '',
+      component: DashboardComponent 
+    },
+    ...CalculadoraRoutes,
+    ...TarefaRoutes,
+    ...JogoDaVelhaRoutes
   ]},
 
   { path: 'forgot-password', 
